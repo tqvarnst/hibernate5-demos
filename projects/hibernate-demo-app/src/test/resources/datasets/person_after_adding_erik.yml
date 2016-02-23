@@ -1,0 +1,26 @@
+Person:
+  - id: 1
+    firstname: "Erik"
+    lastname: "Qvarnstrom"
+    email: "erik@dummy.com"
+    password: "MTIzNDU2Nzg5MA=="
+  - id: 1001
+    firstname: "Thomas"
+    lastname: "Qvarnstrom"
+    email: "thomas@dummy.com"
+    password: "MTIzNDU2Nzg5MA=="
+  - id: 1002
+    firstname: "Annika"
+    lastname: "Qvarnstrom"
+    email: "annika@dummy.com"
+    password: "MTIzNDU2Nzg5MA=="
+  - id: 1003
+    firstname: "Olivia"
+    lastname: "Qvarnstrom"
+    email: "olivia@dummy.com"
+    password: "MTIzNDU2Nzg5MA=="
+  - id: 1004
+    firstname: "Oscar"
+    lastname: "Qvarnstrom"
+    email: "oscar@dummy.com"
+    password: "MTIzNDU2Nzg5MA=="

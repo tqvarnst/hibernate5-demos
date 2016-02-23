@@ -1,0 +1,8 @@
+installs/*.jar
+installs/*.zip
+.classpath
+.project
+.settings
+*.class
+target
+workspace
