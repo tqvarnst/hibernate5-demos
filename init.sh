@@ -81,11 +81,11 @@ echo
 jps -lm | grep jboss-eap | grep -v grep | awk '{print $1}' | xargs kill -KILL
 
 #If docker containers is running stop it
-# echo "  - stopping any removing container with name=demodb"
-# echo
-#
-# docker ps -q -f "name=demodb"  | xargs docker stop > /dev/null
-# docker ps -aq -f "name=demodb"  | xargs docker rm > /dev/null
+echo "  - stopping any removing container with name=demodb"
+echo
+
+docker ps -q -f "name=demodb"  | xargs docker stop > /dev/null
+docker ps -aq -f "name=demodb"  | xargs docker rm > /dev/null
 
 # Create the target directory if it does not already exist.
 if [ -x target ]; then
@@ -104,17 +104,18 @@ do
 	unzip -q -d target/mvn-repos $SRC_DIR/$repo
 done
 
-# echo "  - pulling latest Postgres:9.4 from docker.io"
-# echo
-# docker pull postgres:9.4 > /dev/null
-#
-# echo "  - staring Database containter"
-# echo
-# docker run --name demodb \
-# 	-e POSTGRES_PASSWORD=demo \
-# 	-e POSTGRES_USER=demo \
-# 	-e POSTGRES_DB=demo \
-# 	-d postgres:9.4 > /dev/null
+echo "  - pulling latest Postgres:9.4 from docker.io"
+echo
+docker pull postgres:9.4 > /dev/null
+
+echo "  - staring Database containter"
+echo
+docker run --name demodb \
+	-e POSTGRES_PASSWORD=demo \
+	-e POSTGRES_USER=demo \
+	-e POSTGRES_DB=demo \
+	-p 5432:5432 \
+	-d postgres:9.4 > /dev/null
 
 
 # Unzip the software repo files
