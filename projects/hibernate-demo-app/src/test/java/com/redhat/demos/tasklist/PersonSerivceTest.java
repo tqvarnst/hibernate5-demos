@@ -1,10 +1,8 @@
 package com.redhat.demos.tasklist;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 import java.time.Month;
-import java.util.List;
 import java.util.Set;
 
 import javax.ejb.EJB;
@@ -50,7 +48,7 @@ public class PersonSerivceTest {
 	public void testPasswordConverter() {
 		Person person = personService.getPerson(1001L);
 		assertEquals("Thomas", person.getFirstName());
-		assertEquals("1234567890", person.getPassword());	
+		assertEquals("1234567890", person.getPassword());
 	}
 	
 	@Test

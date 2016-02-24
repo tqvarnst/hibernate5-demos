@@ -7,7 +7,7 @@ AUTHORS="Thomas Qvarnstrom, Red Hat"
 SRC_DIR=$basedir/installs
 
 
-EAP_VERSION=7.0.0.ER5
+EAP_VERSION=7.0.0.ER6
 EAP_INSTALL=jboss-eap-${EAP_VERSION}.zip
 EAP_REPO=jboss-eap-${EAP_VERSION}-maven-repository.zip
 
