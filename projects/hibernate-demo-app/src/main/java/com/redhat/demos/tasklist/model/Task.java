@@ -77,5 +77,12 @@ public class Task {
 	public void setCreationDate(LocalDateTime creationDate) {
 		this.creationDate = creationDate;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof Task && this.getId().equals(((Task) obj).getId());
+	}
+	
+	
 	
 }

@@ -1,7 +1,6 @@
 package com.redhat.demos.tasklist.model;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -9,6 +8,7 @@ import javax.persistence.ColumnResult;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.EntityResult;
+import javax.persistence.FetchType;
 import javax.persistence.FieldResult;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -37,6 +37,7 @@ import com.redhat.demos.tasklist.converters.PasswordConverter;
             columns = @ColumnResult(name = "openTaskCount", type = Long.class))
 })
 public class Person {
+	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	Long id;
@@ -56,7 +57,7 @@ public class Person {
 	@Convert(converter=PasswordConverter.class)
 	String password;
 	
-	@OneToMany(mappedBy = "owner")
+	@OneToMany(mappedBy = "owner",fetch = FetchType.LAZY)
 	Set<Task> tasks = new HashSet<Task>();
 	
 	public Long getId() {

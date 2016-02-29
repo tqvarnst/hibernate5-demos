@@ -1,4 +1,9 @@
 Person:
+  - id: 1
+    firstname: "James"
+    lastname: "Doe"
+    email: "james@dummy.com"
+    password: "MTIzNDU2Nzg5MA=="
   - id: 1001
     firstname: "John"
     lastname: "Doe"
